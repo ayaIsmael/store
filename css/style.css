@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor: #f24906;
+    --darkColor: #15161d;
+    --navyColor: rgb(15, 23, 42);
+}
+body{
+    font-family: "Cairo", serif;
+}
+
+/* start head section */
+.head{
+    color: #fff;
+    background: var(--darkColor);
+}
+.head-sign{
+    padding: .5rem;
+    text-align: center;
+    transition: .3s ease;
+}
+.head-sign p{
+    font-size: 12px;
+}
+.head-sign:hover{
+    color: var(--mainColor);
+}
+.logo{
+    max-width: 200px;
+}
+/* end head section******************************************************************************/
+
+/* start menu section */
+.menu .container ul{
+    list-style: none;
+}
+.menu .container ul li{
+    font-size: 12px;
+    display: inline-block;
+    padding-inline: 4px;
+    text-align: center;
+}
+.menu .container ul li a{
+    text-decoration: none;
+    color: var(--darkColor);
+    transition: .3s ease;
+    position: relative;
+}
+.menu .container ul li a.active{
+    color: var(--mainColor);
+}
+.menu .container ul li a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease;
+    transform: scaleX(0);
+    transform-origin: 0%;
+}
+.menu .container ul li a.active::after{
+    transform: scaleX(1);
+}
+.menu .container ul li a:hover{
+    color: var(--mainColor);
+}
+.menu .container ul li a:hover::after{
+    transform: scaleX(1);
+}
+/* end menu section ******************************************************************/
+
+/* start hero section */
+/* end hero section */
+
+/* start books section */
+.books{
+    background: var(--navyColor);
+}
+.title{
+    font-size: 45px;
+    color: var(--mainColor);
+}
+.cardd{
+    transition: .3s ease;
+    border: 2px solid;
+    border-color: #fff;
+    position: relative;
+    z-index: 12;
+}
+.cardd-img .btnn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 2px solid var(--mainColor);
+    padding: 4px 10px;
+    font-size: 12px;
+}
+.cardd-img .btnn.new{
+    color: #fff;
+    background: var(--mainColor);
+}
+.cardd-img .btnn.discount{
+    color: var(--mainColor);
+    background: #fff;
+}
+.cardd-body{
+    padding: 1rem;
+    background: #fff;
+    text-align: center;
+}
+.cardd-body span:first-child{
+    font-size: 12px;
+    color: #8d99ae;
+}
+.cardd-body div:first-of-type{
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.cardd-body div:first-of-type:hover{
+    color: var(--mainColor);
+}
+.cardd-body div:nth-of-type(2){
+    color: var(--mainColor);
+    font-weight: 700;
+}
+.cardd-body div:nth-of-type(2) span{
+    color: #000;
+    font-size: 12px;
+    color: #8d99ae;
+    font-weight: 400;
+    position: relative;
+}
+.cardd-body div:nth-of-type(2) span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    width: 100%;
+    height: 1px;
+    background: #8d99ae;
+}
+.starts{
+    font-size: 12px;
+    color: #ef233c;
+    position: relative;
+}
+.starts span{
+    margin-inline: -2.5px;
+    position: relative;
+    z-index: 2;
+}
+.starts::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #e4e7ed;
+    z-index: 1;
+}
+.cardd-btns a{
+    position: relative;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
+    transition: .2s ease;
+}
+.cardd-btns a button.ent-link{
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    transform: translatex(-35%);
+    padding: .25rem 1.5rem;
+    font-size: 12px;
+    text-wrap: nowrap;
+    color: #fff;
+    background: #000;
+    z-index: 5;
+    display: none;
+}
+.cardd-btns a:hover{
+    background: #e4e7ed;
+    border-radius: 50%;
+}
+.cardd-btns a:hover button.ent-link{
+    display: block;
+}
+.cardd:hover .cardd-btns a{
+    color: var(--mainColor);
+}
+.cardd-bottom{
+    background:#1e1f29;
+    transform: translateY(-100%);
+    transition: .3s ease;
+    position: relative;
+    z-index: 10;
+}
+.cardd-bottom a{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: .5rem 1.75rem;
+    text-decoration: none;
+    color: #fff!important;
+    background: #ef233c;
+    font-size: 12px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    transition: all .4s ease;
+}
+.cardd-bottom a:hover{
+    color: var(--mainColor)!important;
+    background: #fff;
+    border-color: var(--mainColor);
+}
+.item:hover .cardd{
+    border-color: var(--mainColor);
+    border-bottom-color: #fff;
+}
+.item:hover .cardd-bottom{
+    transform: translateY(0%);
+}
+.owl-theme .owl-nav{
+    display: block!important;
+}
+.owl-nav button.owl-next,
+.owl-nav button.owl-prev{
+    display: inline-flex!important;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 28px!important;
+    color: #000!important;
+    background: #fff!important;
+    border: 1px solid var(--mainColor)!important;
+    border-radius: 50%!important;
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 50%;
+}
+.owl-nav button.owl-next{
+    left: 10px;
+}
+.owl-nav button.owl-prev{
+    right: 10px;
+}
+.owl-nav button.owl-next:hover,
+.owl-nav button.owl-prev:hover{
+    color: #fff!important;
+    background: var(--mainColor)!important;
+}
+
+.more-btn{
+    padding: .5rem 1rem;
+    color: var(--mainColor);
+    background-color: #fff;
+    border: 1px solid var(--mainColor);
+    border-radius: .5rem;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.more-btn:hover{
+    color: #fff;
+    background: var(--mainColor);
+}
+/* end books section ********************************************************************/
+
+/* start media screen************************************************************************* */
+@media(min-width:676px){
+    .menu .container ul li{
+        padding-inline: 20px;
+        font-size: 15px;
+    }
+}
