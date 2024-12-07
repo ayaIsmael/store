@@ -2,6 +2,29 @@ new WOW().init();
 
 
 $(document).ready(function(){
+
+    $(".owl-carousel.hero-layer-one-carousel").owlCarousel({
+        rtl:true,
+        items : 1,
+        autoplay : true,
+        autoplayTimeout: 7800,
+        loop : true,
+        dots: false,
+        nav: false,
+        smartSpeed : 100
+    });
+
+    $(".owl-carousel.hero-layer-two-carousel").owlCarousel({
+        rtl:true,
+        items : 1,
+        autoplay : true,
+        autoplayTimeout: 7800,
+        loop : true,
+        dots: false,
+        nav: false,
+        smartSpeed : 100
+    });
+
     $(".owl-carousel.one").owlCarousel({
         rtl:true,
         loop : true,
@@ -44,3 +67,4 @@ $(document).ready(function(){
     });
 
   });
+
