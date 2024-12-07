@@ -160,8 +160,9 @@ body{
     color: #fff;
 }
 .hero-txt-btns{
-    width: fit-content;
-    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    margin-block: .2rem;
 }
 .hero-txt-btns a{
     text-decoration: none;
@@ -170,6 +171,7 @@ body{
     color: #fff;
     background: var(--mainColor);
     margin-inline: .5rem;
+    margin-block: .5rem;
     border: 1px solid var(--mainColor);
     transition: .3s ease;
 }
@@ -178,6 +180,8 @@ body{
     background: #fff;
 
 }
+.hero-layer-one .owl-nav button.owl-next,
+.hero-layer-one .owl-nav button.owl-prev,
 .hero-layer-two .owl-nav button.owl-next,
 .hero-layer-two .owl-nav button.owl-prev{
     display: none!important;
@@ -990,6 +994,14 @@ body{
     }
     .hero-layer-two{
         max-width: 65%;
+    }
+    .hero-txt-btns{
+        flex-direction: row;
+        width: fit-content;
+        margin: auto;
+    }
+    .hero-txt-btns a{
+        margin-block: unset;
     }
 }
 

@@ -11,7 +11,7 @@ $(document).ready(function(){
         loop : true,
         dots: false,
         nav: false,
-        smartSpeed : 100
+        // smartSpeed : 100
     });
 
     $(".owl-carousel.hero-layer-two-carousel").owlCarousel({
@@ -22,7 +22,7 @@ $(document).ready(function(){
         loop : true,
         dots: false,
         nav: false,
-        smartSpeed : 100
+        // smartSpeed : 100
     });
 
     $(".owl-carousel.one").owlCarousel({
