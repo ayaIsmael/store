@@ -138,7 +138,13 @@ body{
     z-index: 100;
     animation: bgInOut 7.8s infinite;
 }
-
+.owl-stage-outer,
+.owl-stage,
+.owl-item.cloned,
+.owl-item.active{
+    width: 100%;
+    height: 100%!important;
+}
 .hero .container-fluid{
     position: relative;
     z-index: 105;
@@ -153,25 +159,19 @@ body{
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
     color: var(--mainColor);
 }
 .hero-txt p{
     color: #fff;
 }
-.hero-txt-btns{
-    display: flex;
-    flex-direction: column;
-    margin-block: .2rem;
-}
 .hero-txt-btns a{
+    display: block;
+    padding: .5rem 1.5rem;
     text-decoration: none;
     font-size: 15px;
-    padding: .5rem 1.5rem;
     color: #fff;
     background: var(--mainColor);
-    margin-inline: .5rem;
-    margin-block: .5rem;
+    margin: .5rem;
     border: 1px solid var(--mainColor);
     transition: .3s ease;
 }
@@ -995,16 +995,12 @@ body{
     .hero-layer-two{
         max-width: 65%;
     }
-    .hero-txt-btns{
-        flex-direction: row;
-        width: fit-content;
-        margin: auto;
-    }
     .hero-txt-btns a{
-        margin-block: unset;
+        display: inline-block;
+        margin: .25rem;
     }
-}
 
+}
 @media(min-width:1120px){
     .session-img{
         padding: 7rem 1rem;

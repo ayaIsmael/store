@@ -11,7 +11,7 @@ $(document).ready(function(){
         loop : true,
         dots: false,
         nav: false,
-        // smartSpeed : 100
+        smartSpeed : 100
     });
 
     $(".owl-carousel.hero-layer-two-carousel").owlCarousel({
@@ -22,7 +22,7 @@ $(document).ready(function(){
         loop : true,
         dots: false,
         nav: false,
-        // smartSpeed : 100
+        smartSpeed : 100
     });
 
     $(".owl-carousel.one").owlCarousel({
@@ -66,5 +66,17 @@ $(document).ready(function(){
         autoplayTimeout :2000,
     });
 
+
   });
+
+  let stars = document.querySelectorAll(".rating-star");
+    for(let i=0; i<stars.length;i++){
+        let currentElement = stars[i];
+        let previousElements = stars.slice(0, i);
+    }
+    stars.forEach( star, function(){
+        star.addEventistner('click', ()=>{
+            star.innerHtml = '<p>dov</p>';
+        });
+    });
 
