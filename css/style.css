@@ -279,14 +279,16 @@ body{
     font-size: 45px;
     color: var(--mainColor);
 }
-.books .item .cardd{
+.books .item .cardd,
+.products .cardd{
     transition: .3s ease;
     border: 2px solid;
     border-color: transparent;
     position: relative;
     z-index: 12;
 }
-.books .item .cardd .cardd-img .btnn{
+.books .item .cardd .cardd-img .btnn,
+.products .cardd .cardd-img .btnn{
     position: absolute;
     right: 10px;
     top: 10px;
@@ -294,41 +296,49 @@ body{
     padding: 4px 10px;
     font-size: 12px;
 }
-.books .item .cardd .cardd-img .btnn.new{
+.books .item .cardd .cardd-img .btnn.new,
+.products .cardd .cardd-img .btnn.new{
     color: #fff;
     background: var(--mainColor);
 }
-.books .item .cardd .cardd-img .btnn.discount{
+.books .item .cardd .cardd-img .btnn.discount,
+.products .cardd .cardd-img .btnn.discount{
     color: var(--mainColor);
     background: #fff;
 }
-.books .item .cardd .cardd-body{
+.books .item .cardd .cardd-body,
+.products .cardd .cardd-body{
     padding: 1rem;
     background: #fff;
     text-align: center;
 }
 .books .item .cardd .cardd-body span:first-child,
-.owl-carousel-two-txt span:first-child{
+.owl-carousel-two-txt span:first-child,
+.products .cardd .cardd-body span:first-child{
     font-size: 12px;
     color: #8d99ae;
 }
 .books .item .cardd .cardd-body div:first-of-type,
-.owl-carousel-two-txt div:first-of-type{
+.owl-carousel-two-txt div:first-of-type,
+.products .cardd .cardd-body div:first-of-type{
     font-size: 14px;
     font-weight: 700;
     transition: .3s ease;
 }
 .books .item .cardd .cardd-body div:first-of-type:hover,
-.owl-carousel-two-txt div:first-of-type:hover{
+.owl-carousel-two-txt div:first-of-type:hover,
+.products .cardd .cardd-body div:first-of-type:hover{
     color: var(--mainColor);
 }
 .books .item .cardd .cardd-body div:nth-of-type(2),
-.owl-carousel-two-txt div:nth-of-type(2){
+.owl-carousel-two-txt div:nth-of-type(2),
+.products .cardd .cardd-body div:nth-of-type(2){
     color: var(--mainColor);
     font-weight: 700;
 }
 .books .item .cardd .cardd-body div:nth-of-type(2) span,
-.owl-carousel-two-txt div:nth-of-type(2) span{
+.owl-carousel-two-txt div:nth-of-type(2) span,
+.products .cardd .cardd-body div:nth-of-type(2) span{
     color: #000;
     font-size: 12px;
     color: #8d99ae;
@@ -336,7 +346,8 @@ body{
     position: relative;
 }
 .books .item .cardd .cardd-body div:nth-of-type(2) span::after,
-.owl-carousel-two-txt div:nth-of-type(2) span::after{
+.owl-carousel-two-txt div:nth-of-type(2) span::after,
+.products .cardd .cardd-body div:nth-of-type(2) span::after{
     content: "";
     position: absolute;
     left: 0;
@@ -346,17 +357,20 @@ body{
     height: 1px;
     background: #8d99ae;
 }
-.books .item .cardd .cardd-body .starts{
+.books .item .cardd .cardd-body .starts,
+.products .cardd .cardd-body .starts{
     font-size: 12px;
     color: #ef233c;
     position: relative;
 }
-.books .item .cardd .cardd-body .starts span{
+.books .item .cardd .cardd-body .starts span,
+.products .cardd .cardd-body .starts span{
     margin-inline: -2.5px;
     position: relative;
     z-index: 2;
 }
-.books .item .cardd .cardd-body .starts::after{
+.books .item .cardd .cardd-body .starts::after,
+.products .cardd .cardd-body .starts::after{
     content: "";
     position: absolute;
     left: 0;
@@ -366,7 +380,8 @@ body{
     background: #e4e7ed;
     z-index: 1;
 }
-.books .item .cardd .cardd-body .cardd-btns a{
+.books .item .cardd .cardd-body .cardd-btns a,
+.products .cardd .cardd-body .cardd-btns a{
     position: relative;
     text-decoration: none;
     padding: 14px;
@@ -377,7 +392,8 @@ body{
     font-size: 14px;
     transition: .2s ease;
 }
-.books .item .cardd .cardd-body .cardd-btns a button.ent-link{
+.books .item .cardd .cardd-body .cardd-btns a button.ent-link,
+.products .cardd .cardd-body .cardd-btns a button.ent-link{
     position: absolute;
     bottom: 110%;
     left: 0;
@@ -390,24 +406,29 @@ body{
     z-index: 5;
     display: none;
 }
-.books .item .cardd .cardd-body .cardd-btns a:hover{
+.books .item .cardd .cardd-body .cardd-btns a:hover,
+.products .cardd .cardd-body .cardd-btns a:hover{
     background: #e4e7ed;
     border-radius: 50%;
 }
-.books .item .cardd .cardd-body .cardd-btns a:hover button.ent-link{
+.books .item .cardd .cardd-body .cardd-btns a:hover button.ent-link,
+.products .cardd .cardd-body .cardd-btns a:hover button.ent-link{
     display: block;
 }
-.books .item .cardd:hover .cardd-btns a{
+.books .item .cardd:hover .cardd-btns a,
+.products .cardd:hover .cardd-btns a{
     color: var(--mainColor);
 }
-.books .item .cardd-bottom{
+.books .item .cardd-bottom,
+.products .cardd-bottom{
     background:#1e1f29;
     transform: translateY(-100%);
     transition: .3s ease;
     position: relative;
     z-index: 10;
 }
-.books .item .cardd-bottom a{
+.books .item .cardd-bottom a,
+.products .cardd-bottom a{
     display: block;
     width: fit-content;
     margin: auto;
@@ -421,16 +442,19 @@ body{
     border-radius: 40px;
     transition: all .4s ease;
 }
-.books .item .cardd-bottom a:hover{
+.books .item .cardd-bottom a:hover,
+.products .cardd-bottom a:hover{
     color: var(--mainColor)!important;
     background: #fff;
     border-color: var(--mainColor);
 }
-.books .item:hover .cardd{
+.books .item:hover .cardd,
+.products .cardd-container:hover .cardd{
     border-color: var(--mainColor)!important;
     border-bottom-color: transparent!important;
 }
-.books .item:hover .cardd-bottom{
+.books .item:hover .cardd-bottom,
+.products .cardd-container:hover .cardd-bottom{
     transform: translateY(0%);
 }
 .owl-theme .owl-nav{
@@ -845,10 +869,10 @@ body{
 }
 /* end details section ********************************************************************************/
 /* start reviews section */
-.nav.nav-pills{
+.reviews .nav.nav-pills{
     position: relative;
 }
-.nav.nav-pills::before{
+.reviews .nav.nav-pills::before{
     content:"" ;
     width: 100%;
     height: 1px;
@@ -866,7 +890,7 @@ body{
     position: relative;
 }
 .reviews .nav-pills .nav-link.active, 
-.nav-pills .show>.nav-link {
+.reviews .nav-pills .show>.nav-link {
     color: var(--mainColor);
     background-color: #fff;
 }
@@ -977,7 +1001,278 @@ body{
 /* end reviews section ******************************************************************************/
 /* end product details page *************************************************************************/
 
-/* start media screen************************************************************************* */
+
+/* start products page */
+/* start products section */
+.offcanvas-btn{
+    display: block;
+    color: #fff;
+    background-color: var(--mainColor);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px!important;
+    margin-bottom: 1rem;
+    transition: .3s ease;
+}
+.offcanvas-btn:hover,
+.offcanvas-btn:focus{
+    color: var(--mainColor);
+    background-color: #fff;
+}
+.btn-close:focus {
+    box-shadow: none;
+}
+.offcanvas-txt{
+    color: var(--darkColor);
+}
+.offcanvas-txt h3{
+    font-size: 18px;
+    margin: 15px 0 30px;
+    font-weight: 700;
+}
+.offcanvas-txt .nav-pills .nav-link{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--darkColor);
+    border: 1px solid rgb(209, 213, 219);
+}
+.offcanvas-txt .nav-pills .nav-link.active{
+    color: var(--mainColor);
+    background: #fff;
+    border-color: var(--mainColor);
+}
+
+.offcanvas-txt .accordion-item {
+    border: none;
+}
+.offcanvas-txt .accordion-button {
+    padding: 1rem 0rem;
+}
+.offcanvas-txt .accordion-button:not(.collapsed),
+.offcanvas-txt .accordion-button:focus {
+    color: var(--darkColor);
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: none;
+}
+.offcanvas-txt .accordion-button::after{
+    background-image: url(../images/arr.svg);
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    color: var(--darkColor)!important;
+    margin-right: 5px;
+    margin-left: auto;
+}
+.offcanvas-txt .accordion-body {
+    padding: 1rem 0rem;
+}
+.offcanvas-txt .tab-accodion-ele{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--darkColor);
+    margin-bottom: 1rem;
+}
+.offcanvas-txt .tab-accodion-ele label span{
+    font-size: 10px;
+    color: #8d99ae;
+}
+.offcanvas-txt .tab-accodion-ele input[type="checkbox"]:checked{
+    accent-color: var(--mainColor);
+}
+.offcanvas-txt .search-btn{
+    display: block;
+    text-decoration: none;
+    color: var(--mainColor);
+    background: #fff;
+    border: 1px solid var(--mainColor);
+    text-align: center;
+    font-size: 18px;
+    padding: .5rem 1.25rem;
+    border-radius: .5rem;
+    transition: .3s ease-in-out;
+}
+.offcanvas-txt .search-btn:hover{
+    color: #fff;
+    background: var(--mainColor);
+}
+.products .more-products,
+.jobs .more-products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products .more-products p,
+.jobs .more-products p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+/* end products section ****************************************************************************** */
+/* end products page *********************************************************************************/
+
+
+/* start jobs page */
+/* start jobs section */
+.job-txt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: baseline;
+    padding: 1rem 1.25rem;
+    background: #fff;
+    border: 1px solid var(--mainColor);
+    border-radius: .375rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .1);
+    transition: .3s ease;
+}
+.job-txt:hover{
+    transform: scale(1.01);
+}
+.job-txt-info span:first-child{
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--mainColor);
+}
+.job-txt-info h3{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--darkColor);
+}
+.job-txt-info span:not(:first-child),
+.job-details-txt span,
+.job-details-txt .job-txt-info span{
+    font-size: 10px;
+    color: var(--mainColor);
+    background: #f3e8ff;
+}
+.job-txt .job-txt-info span:last-child{
+    color: rgb(71 85 105);
+    background: transparent;
+}
+.job-txt-btn{
+    padding: 8px 10px;
+    background: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    border-radius: .375rem;
+    transition: .3s ease;
+}
+.job-txt-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+.job-txt-btn:hover{
+    background: rgb(192 61 9);
+}
+/* end jobs section ********************************************************************************************* */
+/* end jobs page ********************************************************************************************* */
+
+/* start job details page */
+/* start job details section */
+.job-details-txt{
+    padding: 30px;
+    color: var(--darkColor);
+    background: #fff;
+    border: 2px solid #11182733;
+    border-radius: .375px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+    transition: .3s ease;
+}
+.job-details-txt:hover{
+    transform: scale(1.01);
+}
+.job-details-txt h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+.job-details-txt h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--mainColor);
+    margin-bottom: 0;
+}
+.job-details-txt p{
+    color: #000;
+    font-size: 12px;
+}
+.job-details-txt .tascks,
+.job-details-txt .skills{
+    display: flex;
+    flex-direction: column;
+}
+.job-details-txt .tascks p,
+.job-details-txt .skills p{
+    margin-inline: 16px;
+}
+.job-details-txt img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--mainColor);
+}
+/* end job details section ****************************************************************************** */
+/* end job details page ****************************************************************************** */
+
+/* start work page */
+/* start search section */
+.search{
+    background: var(--navyColor);
+}
+.search-txt-one h1{
+    font-family: 20px;
+    color: #fff;
+}
+.search-txt-one h3{
+    color: var(--mainColor);
+}
+.search-txt-one a{
+    display: block;
+    padding-block: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: var(--mainColor);
+    border-radius: .25rem;
+    transition: .3s ease;
+}
+.search-txt-one a:hover{
+    background: #b34019;
+}
+.search-txt-two{
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    background: transparent;
+    border: 1px solid var(--mainColor);
+    border-radius: .5rem;
+    transition: .3s ease;
+}
+.search-txt-two:hover{
+    transform: scale(1.05);
+}
+.search-txt-three{
+    border-radius: .375rem;
+    transition: .25s ease;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+.search-txt-three:hover{
+    transform: scale(1.05);
+    border-color: var(--mainColor);
+}
+.search-txt-three div{
+    color:  rgb(100 116 139 );
+}
+.search-txt-three h3{
+    color: var(--mainColor);
+}
+/* end search section ********************************************************************************************* */
+/* end work page ********************************************************************************************* */
+
+
+/* start media screen******************************************************************************* */
 @media(min-width:676px){
     .menu .container-fluid ul li{
         padding-inline: 16px;
@@ -999,6 +1294,11 @@ body{
         display: inline-block;
         margin: .25rem;
     }
+    .job-txt{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
 }
 @media(min-width:1120px){
@@ -1007,5 +1307,10 @@ body{
     }
     .session-img h1{
         font-size: 5rem;
+    }
+    .job-details-txt .tascks,
+    .job-details-txt .skills{
+        flex-direction: row;
+        align-items: end;
     }
 }

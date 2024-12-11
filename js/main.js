@@ -70,13 +70,36 @@ $(document).ready(function(){
   });
 
   let stars = document.querySelectorAll(".rating-star");
-    for(let i=0; i<stars.length;i++){
-        let currentElement = stars[i];
-        let previousElements = stars.slice(0, i);
-    }
-    stars.forEach( star, function(){
-        star.addEventistner('click', ()=>{
-            star.innerHtml = '<p>dov</p>';
-        });
+  stars.forEach(star=>{
+    star.addEventListener('click', ()=>{
+        star.innerHTML = '<i class="fa-solid fa-star"></i>';
     });
+
+
+    // for(let i=0; i<stars.length; i++){
+    //     if(star===stars[i]){
+    //         allElements = stars.slice(0, i);
+    //     }
+    //     allElements.forEach(element=>{
+    //         element.innerHTML = '<i class="fa-solid fa-star"></i>';
+    //     });
+    // }
+  });
+
+
+
+
+    // for(let i=0; i<stars.length;i++){
+    //     let currentElement = stars[i];
+    //     let previousElements = stars.slice(0, i+1);
+    //     previousElements.forEach(previousElement => {
+    //         previousElement.innerHtml ="";
+    //     });;
+    // }
+
+    // stars.forEach( star, function(){
+    //     star.addEventistner('click', ()=>{
+    //         star.innerHtml = '<p>dov</p>';
+    //     });
+    // });
 
