@@ -53,7 +53,6 @@ $(document).ready(function(){
         loop : true,
         dots: true,
         nav: true
-        
     });
 
     $(".owl-carousel.three").owlCarousel({
@@ -66,40 +65,85 @@ $(document).ready(function(){
         autoplayTimeout :2000,
     });
 
-
-  });
-
-  let stars = document.querySelectorAll(".rating-star");
-  stars.forEach(star=>{
-    star.addEventListener('click', ()=>{
-        star.innerHTML = '<i class="fa-solid fa-star"></i>';
+    $(".owl-carousel.four").owlCarousel({
+        rtl:true,
+        loop : true,
+        responsive:{
+            0:{
+                items:1
+            },
+            500:{
+                items:2
+            },
+            800:{
+                items:3
+            },
+            1100:{
+                items:4
+            }
+        },
+        dots: false,
+        nav: true
     });
 
-
-    // for(let i=0; i<stars.length; i++){
-    //     if(star===stars[i]){
-    //         allElements = stars.slice(0, i);
-    //     }
-    //     allElements.forEach(element=>{
-    //         element.innerHTML = '<i class="fa-solid fa-star"></i>';
-    //     });
-    // }
   });
 
+  //rating starts //////////////////////////////////////////////////////////////
+  let starts = document.querySelectorAll('.rating-star');
+  starts.forEach((star, index) => {
+    star.addEventListener('click', () =>{
+        starts.forEach((s,i) => {
+            if(i<=index){
+                s.innerHTML = '<i class="fa-solid fa-star"></i>';
+            }else{
+                s.innerHTML = '<i class="fa-regular fa-star"></i>';
+            }
+        });
+    });
+    
+  });
+
+  // increasing numbers //////////////////////////////////////////////////////////
+  let numbersSection = document.querySelector('.numbers');
+  let started =false;
+  window.onscroll=function(){
+    if(window.scrollY >= numbersSection.offsetTop - 300){
+        let numbers = document.querySelectorAll('.increasing-number');
+        if(started == false){
+
+            numbers.forEach(number => {
+        
+            let endValue = number.dataset.val;
+                
+            let x = window.setInterval(() => {
+            number.textContent ++;
+
+            if(number.textContent == endValue){clearInterval(x);}
+
+            },Math.ceil(1000/endValue)); 
+            });
+        }
+        started = true; 
+    }
+  };
+
+   //price range ////////////////////////////////////////////////////////////////
+   let priceRange = document.getElementById('price-range');
+   let priceRangeValue = document.getElementById('price-range-value');
+   priceRange.oninput = function(){
+     priceRangeValue.innerHTML = this.value;
+   };
+ 
+   let priceRange2 = document.getElementById('price-range2');
+   let priceRangeValue2 = document.getElementById('price-range-value2');
+   priceRange2.oninput = function(){
+     priceRangeValue2.innerHTML = this.value;
+   };
+
+ 
 
 
 
-    // for(let i=0; i<stars.length;i++){
-    //     let currentElement = stars[i];
-    //     let previousElements = stars.slice(0, i+1);
-    //     previousElements.forEach(previousElement => {
-    //         previousElement.innerHtml ="";
-    //     });;
-    // }
 
-    // stars.forEach( star, function(){
-    //     star.addEventistner('click', ()=>{
-    //         star.innerHtml = '<p>dov</p>';
-    //     });
-    // });
 
+    

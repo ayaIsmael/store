@@ -556,20 +556,20 @@ body{
 .session-txt p{
     color: #16A34A;
 }
-.session-txt .btnn{
+.session-txt a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
     padding: .5rem 1rem;
     margin-block: 1rem;
     background: var(--greenColor);
     border-radius: 5px;
     transition: .2s ease;
 }
-.session-txt .btnn:hover{
+.session-txt a:hover{
     background: #16A34A;
-}
-.session-txt .btnn a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
 }
 .session-img{
     width: 100%;
@@ -1082,6 +1082,20 @@ body{
 .offcanvas-txt .tab-accodion-ele input[type="checkbox"]:checked{
     accent-color: var(--mainColor);
 }
+.offcanvas-txt .price-range input[type="range"]::-webkit-slider-runnable-track{
+    background: rgb(238 176 176);
+    height: .333rem;
+}
+.offcanvas-txt .price-range input[type="range"]::-webkit-slider-thumb{
+    background: var(--mainColor);
+    height: 1rem;
+    margin-top: -.333rem;
+}
+.offcanvas-txt .price-range input[type="range"]:focus::-webkit-slider-thumb{
+    outline: none;
+    box-shadow: none;
+  }
+
 .offcanvas-txt .search-btn{
     display: block;
     text-decoration: none;
@@ -1182,9 +1196,6 @@ body{
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
     transition: .3s ease;
 }
-.job-details-txt:hover{
-    transform: scale(1.01);
-}
 .job-details-txt h1{
     font-size: 22px;
     font-weight: 700;
@@ -1269,10 +1280,334 @@ body{
     color: var(--mainColor);
 }
 /* end search section ********************************************************************************************* */
+/* start numbers section */
+.numbers-title h4{
+    font-size: 22px;
+    color: rgb(17 24 39 );
+    font-weight: 700;
+}
+.numbers-title p{
+    font-size: 12px;
+    color: rgb(107 114 128);
+}
+.number{
+    padding: 1rem;
+    text-align: center;
+}
+.number h1{
+    font-size: 45px;
+    color: var(--mainColor);
+}
+.number div{
+    font-size: 22px;
+    color: rgb(107 114 128 );
+}
+/* end numbers section ***************************************************************************************/
+
+/* start stories section */
+.story-img{
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: .75rem;
+    place-items: center;
+    cursor: pointer;
+    transition: all .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+.story-img:hover{
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+/* end stories section ****************************************************************************************/
+
+/* start plans section */
+.plan{
+    padding-top: 3rem;
+    color: #000;
+    border: 1px solid rgb(156 163 175 );
+    border-radius: .75rem;
+    position: relative;
+}
+.plan .plan-title{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px 52px;
+    font-size: 15px ;
+    text-align: center;
+    color: var(--mainColor);
+    background: #fff;
+    border: 1px solid var(--mainColor);
+    border-radius: .5rem;
+    transition: .3s ease;
+}
+.plan .plan-title:hover{
+    color: #fff;
+    background: var(--mainColor);
+}
+.plan p{
+    font-size: 14px;
+}
+.plan p + div{
+    font-size: 14px;
+    color: rgb(156 163 175 );
+    font-weight: 700;
+}
+.plan p + div span{
+    font-size: 22px;
+    color: rgb(17 24 39);
+}
+.plan a{
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff!important;
+    background: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    border-radius: .25rem;
+    margin-block: .5rem;
+    transition: .2s ease;
+}
+.plan a:hover{
+    color: var(--mainColor)!important;
+    background: #fff;
+}
+.plan .hr{
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+.plan .p-3{
+    font-size: 12.5px;
+    line-height: 1.5rem;
+}
+.plan .p-3 span{
+    color: var(--mainColor);
+}
+/* end plans section *******************************************************************************************/
+/* start connection section */
+.connection-txt-one,
+.connection-txt-two{
+    padding: 1rem 1.5rem;
+    background: #fff;
+    box-shadow:  0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+}
+.connection-txt-one p:first-of-type{
+    font-size: 30px;
+    color: #333;
+}
+.connection-txt-one p:first-of-type span{
+    color: var(--mainColor);
+}
+.connection-txt-one div span{
+    font-size: 2rem;
+}
+.connection-txt-one div span:nth-child(1){ color: #3b82f6;}
+.connection-txt-one div span:nth-child(2){ color: #fd0693;}
+.connection-txt-one div span:nth-child(3){ color: #000;}
+.connection-txt-one div span:nth-child(4){ color: #26d367;}
+
+.connection-txt-one p:last-of-type{
+    color: rgb(107 114 128 );
+}
+.connection-txt-two .form input,
+.connection-txt-two .form textarea,
+.connection-txt-two .form label{
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 8px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: .5rem;
+}
+.connection-txt-two .form label{
+    padding: .75rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    border-color: #ddd;
+    transition: .3s ease; 
+}
+.connection-txt-two .form label:hover{
+    border-color: var(--mainColor);
+}
+.form label.active{
+    color: #fff;
+    background: var(--mainColor);
+}
+.form textarea{
+    min-height: 120px;
+}
+.form input[type="submit"]{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--mainColor);
+    border: none;
+    transition: .3s ease;
+}
+.form input[type="submit"]:hover{
+    background: #b34019;
+}
+/* end connection section ************************************************************************************/
+/* start questions section */
+.questions{
+    background: var(--navyColor);
+    padding-bottom: 80px;
+}
+.questions-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mainColor);
+}
+.questions .accordion-item,
+.questions .accordion-button{
+    padding: 1rem 0rem;
+    color: #fff;
+    background-color: transparent;
+}
+.questions .accordion-item{
+    border: none;
+    border-bottom: 1px solid #fff!important;
+    border-radius: 0!important;
+}
+.questions .accordion-button:focus{
+    border-color: unset;
+    box-shadow:none;
+}
+.questions .accordion-body{
+    padding: 0rem;
+    padding-bottom: 2rem;
+}
+
+.questions .accordion-button::after{
+    width: 25px;
+    height: 25px;
+    background-color: #0db6f9;
+    border-radius: 50%;
+    background-image: url('../images/plus-solid.svg');
+    background-size: 12.5px;
+    background-position: center;
+    filter: invert(100%);
+}
+.questions .accordion-button:not(.collapsed)::after {
+    background-image: url('../images/minus-solid.svg');
+}
+/* start questions section **************************************************************************************/
 /* end work page ********************************************************************************************* */
 
+/* start booking page */
+.booking{
+    background: rgb(249 250 251 );
+}
+.booking .container-fluid{
+    padding-block: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+.booking-txt-one,
+.booking-txt-two,
+.booking-txt-three{
+    padding: 1rem .5rem;
+}
+.booking-txt-one h6,
+.booking-txt-two h6,
+.booking-txt-three h6{
+    color: #2b2d42;
+    text-align: center;
+    font-size: 11.5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.booking-txt-one a{
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(34 197 94 )!important;
+    background: #fff;
+    border: 1px solid;
+    border-radius: .25rem;
+    margin-bottom: .5rem;
+    transition: .3s ease;
+}
+.booking-txt-one a:hover{
+    background: rgb(220 252 231);
+}
+.booking-txt-two h6 + div h5{
+    font-size: 14px;
+    font-weight: 400;
+}
+.booking-txt-two .row.row-cols-6 .col{
+    padding: 2.5px 0;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: .5rem ;
+}
+.booking-txt-two .row.row-cols-6 .col.day-name{
+    color: rgb(107 114 128);
+}
+.booking-txt-two .row.row-cols-6 .col.active{
+    color: #fff;
+    background: rgb(34 197 94 );
+    border-radius: 15px;
+}
+.booking-txt-three h5{
+    font-size: 14px;
+    color: rgb(75 85 99 );
+    line-height: 200%;
+}
+.booking-txt-three a{
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    font-size: 14px;
+    text-align: center;
+    color: #fff!important;
+    background: rgb(34 197 94 );
+    border: 1px solid;
+    border-radius: .25rem;
+    margin-bottom: .5rem;
+    transition: .3s ease;
+}
+.booking-txt-three a:hover{
+    background: #16A34A;
+}
+.booking-txt-three a:last-child{
+    color: #333!important;
+    background: #ddd;
+    border-color: #ddd;
+}
 
-/* start media screen******************************************************************************* */
+.booking-txt-three a:last-child:hover{
+    background: rgb(209 213 219);
+}
+.booking-txt-three .dr-name{
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.booking-txt-three .dr-name select{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.booking-txt-three .dr-name select {
+    font-size: 14px;
+    color: rgb(75 85 99);
+}
+/* end booking page *************************************************************************************************/
+
+
+/* start media screen******************************************************************************* **************/
 @media(min-width:676px){
     .menu .container-fluid ul li{
         padding-inline: 16px;
@@ -1299,7 +1634,21 @@ body{
         align-items: center;
         justify-content: space-between;
     }
-
+    .numbers-title{
+        width: 75%;
+    }
+}
+@media(min-width: 991px){
+    .number.one,
+    .number.two{
+    border-left: 1px solid #ddd;
+    }
+    .plan.two{
+        transform: scaleY(1.1);
+    }
+    .booking .container-fluid .row .col-lg-4:not(:last-child){
+    border-left: 1px solid #ddd;
+    }
 }
 @media(min-width:1120px){
     .session-img{
@@ -1313,4 +1662,8 @@ body{
         flex-direction: row;
         align-items: end;
     }
+    .numbers-title{
+        width: 33%;
+    }
+    
 }
