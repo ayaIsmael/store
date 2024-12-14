@@ -1237,7 +1237,12 @@ body{
     color: #fff;
 }
 .search-txt-one h3{
-    color: var(--mainColor);
+    text-transform: capitalize;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .5px var(--mainColor) ;
 }
 .search-txt-one a{
     display: block;
@@ -1505,7 +1510,7 @@ body{
 .booking{
     background: rgb(249 250 251 );
 }
-.booking .container-fluid{
+.booking .booking-form{
     padding-block: 1rem;
     background: #fff;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
@@ -1549,9 +1554,15 @@ body{
     font-size: 14px;
     color: #333;
     margin-bottom: .5rem ;
+    transition: .3s ease;
 }
 .booking-txt-two .row.row-cols-6 .col.day-name{
     color: rgb(107 114 128);
+}
+.booking-txt-two .row.row-cols-6 .col:hover:not(.day-name){
+    color: rgb(34 197 94 );
+    background: rgb(220 252 231);
+    border-radius: 15px;
 }
 .booking-txt-two .row.row-cols-6 .col.active{
     color: #fff;
